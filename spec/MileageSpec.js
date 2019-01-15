@@ -21,7 +21,7 @@ describe("Mileage", function() {
         }
       }]
       mileage = new Mileage(history);
-      expect(mileage.calculateMileage()).toBe(5499)
+      expect(mileage.calculateAnnualAverageMileage()).toBe(5499)
     });
 
     it("Gets the average mileage when given a history with 3 events", function() {
@@ -50,7 +50,7 @@ describe("Mileage", function() {
          }
        }]
       mileage = new Mileage(history);
-      expect(mileage.calculateMileage()).toBe(7702.666666666667)
+      expect(mileage.calculateAnnualAverageMileage()).toBe(7702.666666666667)
     });
 
     it("Gets the average mileage when given a history with duplicate events", function() {
@@ -79,7 +79,7 @@ describe("Mileage", function() {
          }
        }]
       mileage = new Mileage(history);
-      expect(mileage.calculateMileage()).toBe(5499)
+      expect(mileage.calculateAnnualAverageMileage()).toBe(5499)
     });
 
     it("Gets the average mileage when given a test history", function () {
@@ -134,7 +134,7 @@ describe("Mileage", function() {
        }
       ]
       mileage = new Mileage(history);
-      expect(mileage.calculateMileage(history)).toBe(6401.6)
+      expect(mileage.calculateAnnualAverageMileage(history)).toBe(6401.6)
     });
   });
 
