@@ -3,7 +3,7 @@ describe("Mileage", function() {
   describe("calculateMileage", function() {
     let mileage;
 
-    it("gets the average mileage when given a history with 2 events", function() {
+    it("Gets the average mileage when given a history with 2 events", function() {
       const history = [{
         event: 'MOT',
         date: '2018-3-10T00:00:00.000Z',
@@ -24,7 +24,7 @@ describe("Mileage", function() {
       expect(mileage.calculateMileage()).toBe(5499)
     });
 
-    it("gets the average mileage when given a history with 3 events", function() {
+    it("Gets the average mileage when given a history with 3 events", function() {
       const history = [{
         event: 'MOT',
         date: '2018-3-10T00:00:00.000Z',
@@ -53,7 +53,7 @@ describe("Mileage", function() {
       expect(mileage.calculateMileage()).toBe(7702.666666666667)
     });
 
-    it("gets the average mileage when given a history with duplicate events", function() {
+    it("Gets the average mileage when given a history with duplicate events", function() {
       const history = [{
         event: 'MOT',
         date: '2018-3-10T00:00:00.000Z',
@@ -82,7 +82,7 @@ describe("Mileage", function() {
       expect(mileage.calculateMileage()).toBe(5499)
     });
 
-    it("gets the average mileage when given a test history", function () {
+    it("Gets the average mileage when given a test history", function () {
       const history = [
        {
          event: 'MOT',
