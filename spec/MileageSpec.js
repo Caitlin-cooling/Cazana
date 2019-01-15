@@ -1,11 +1,8 @@
 describe("Mileage", function() {
-  let mileage;
-
-  beforeEach(function(){
-    mileage = new Mileage();
-  });
 
   describe("calculateMileage", function() {
+    let mileage;
+
     it("gets the average mileage when given a history with 2 events", function() {
       const history = [{
         event: 'MOT',
@@ -23,7 +20,8 @@ describe("Mileage", function() {
           passed: true
         }
       }]
-      expect(mileage.calculateMileage(history)).toBe(5499)
+      mileage = new Mileage(history);
+      expect(mileage.calculateMileage()).toBe(5499)
     });
 
     it("gets the average mileage when given a history with 3 events", function() {
@@ -51,7 +49,8 @@ describe("Mileage", function() {
            passed: true
          }
        }]
-      expect(mileage.calculateMileage(history)).toBe(7702.666666666667)
+      mileage = new Mileage(history);
+      expect(mileage.calculateMileage()).toBe(7702.666666666667)
     });
 
     it("gets the average mileage when given a history with duplicate events", function() {
@@ -79,7 +78,8 @@ describe("Mileage", function() {
           passed: true
          }
        }]
-      expect(mileage.calculateMileage(history)).toBe(5499)
+      mileage = new Mileage(history);
+      expect(mileage.calculateMileage()).toBe(5499)
     });
 
     it("gets the average mileage when given a test history", function () {
@@ -133,7 +133,8 @@ describe("Mileage", function() {
          }
        }
       ]
+      mileage = new Mileage(history);
       expect(mileage.calculateMileage(history)).toBe(6401.6)
     });
   });
-})
+});

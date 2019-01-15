@@ -1,16 +1,20 @@
 class Mileage {
-  calculateMileage(history) {
-    let years = history.length;
+  constructor(history) {
+    this.history = history;
+  }
+
+  calculateMileage() {
+    let years = this.history.length;
     let averageMileage = 0;
     let totalChange = 0;
 
-    for(let i = 0; i < history.length-1; i++){
-      if(history[i].date === history[i + 1].date) {
+    for(let i = 0; i < this.history.length-1; i++){
+      if(this.history[i].date === this.history[i + 1].date) {
         years -= 1;
       }
     }
 
-    totalChange = history[0].data.mileage - history[history.length-1].data.mileage;
+    totalChange = this.history[0].data.mileage - this.history[this.history.length-1].data.mileage;
     return averageMileage = totalChange / years
   };
 };
