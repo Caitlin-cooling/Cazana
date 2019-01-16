@@ -11,8 +11,9 @@ Given the all the MOT’s in a vehicle’s history, you must create two function
 ## Using this app
 Once you have cloned the app:
 1. `cd Cazana`
-2. Open `index.html` in your browser
-3. Open your Developer Tools console to see the requested results
+2. `npm install`
+3. Open `index.html` in your browser
+4. Open your Developer Tools console to see the requested results
 
 ## Tests
 This app was written using TDD, and the testing framework used was Jasmine. To run the tests, please open `SpecRunner.html` in your browser.
@@ -24,6 +25,9 @@ As mentioned, I used TDD to break down the problems in to smaller chunks to solv
 By using this approach I was able to spot edge cases such as when the history has multiple entries from the same date that can effect the results.
 
 I decided that 'today' should be initiliazed in the constructor, where a specific date can either be passed in as an argument, say for example you wanted to find the mileage on a certain day, or if no value is given todays date and time will be used. This allows maximum flexibility for the user, but also allows a high test coverage to be achieved.
+
+## Linting
+Linting was completed using ESLint and a popular styleguide.
 
 ## Without Time Restriction I would have...
 Liked to implement a user interface.
