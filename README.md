@@ -14,10 +14,11 @@ Given the all the MOT’s in a vehicle’s history, you must create two function
 3. `npm install`
 4. Open `index.html` in your browser
 5. Open your Developer Tools console to see the requested results
+![alt text](images/index.png)
 
 ## Tests
 This app was written using TDD, and the testing framework used was Jasmine. To run the tests, please open `SpecRunner.html` in your browser.
-![alt text](tests.png)
+![alt text](images/tests.png)
 
 ## My Approach to solving this problem
 As mentioned, I used TDD to break down the problems in to smaller chunks to solve it efficiently. I have found that using the TDD principle of "writing the minimal amount of code to pass the test" often results in clean, minimal code with expected behaviour.
