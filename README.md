@@ -9,11 +9,11 @@ Given the all the MOT’s in a vehicle’s history, you must create two function
 * Estimate the vehicle’s current mileage by projecting from the most recent, event using the average annual mileage.
 
 ## Using this app
-Once you have cloned the app:
-1. `cd Cazana`
-2. `npm install`
-3. Open `index.html` in your browser
-4. Open your Developer Tools console to see the requested results
+1. `git clone https://github.com/Caitlin-cooling/Cazana.git`
+2. `cd Cazana`
+3. `npm install`
+4. Open `index.html` in your browser
+5. Open your Developer Tools console to see the requested results
 
 ## Tests
 This app was written using TDD, and the testing framework used was Jasmine. To run the tests, please open `SpecRunner.html` in your browser.
