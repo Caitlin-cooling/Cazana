@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mileage</title>
+    <script src='src/Mileage.js'></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const history = [
+       {
+         event: 'MOT',
+         date: '2018-3-10T00:00:00.000Z',
+         data: {
+           mileage: 69383,
+           passed: true
+         }
+       },
+       {
+         event: 'MOT',
+         date: '2017-3-10T00:00:00.000Z',
+         data: {
+           mileage: 58385,
+           passed: true
+         }
+       },
+       {
+         event: 'MOT',
+         date: '2016-4-10T00:00:00.000Z',
+         data: {
+           mileage: 46275,
+           passed: true
+         }
+       },
+       {
+         event: 'MOT',
+         date: '2016-4-10T00:00:00.000Z',
+         data: {
+           mileage: 46275,
+           passed: false
+         }
+       },
+       {
+         event: 'MOT',
+         date: '2015-4-10T00:00:00.000Z',
+         data: {
+           mileage: 37375,
+           passed: true
+         }
+       },
+       {
+         event: 'MOT',
+         date: '2014-4-10T00:00:00.000Z',
+         data: {
+           mileage: 37375,
+           passed: true
+         }
+       }
+      ]
+
+      let mileage = new Mileage(history)
+      console.log(`The average mileage of this vehicle is ${mileage.calculateAnnualAverageMileage()}`)
+      console.log(`The estimated mileage of this vehicle today ${mileage.currentMileage()}`)
+    </script>
+  </body>
+</html>
