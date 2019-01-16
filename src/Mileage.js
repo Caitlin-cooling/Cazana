@@ -1,7 +1,8 @@
 class Mileage {
-  constructor(history) {
+  constructor(history, date) {
     this.history = history;
     this.averageMileage;
+    this.today = date || new Date();
   }
 
   calculateAnnualAverageMileage() {
@@ -23,16 +24,13 @@ class Mileage {
     let mileagePerDay = 0;
     let daysDifference = 0;
     let totalMileage = 0;
-    let today = new Date();
-    let formattedDate = this.formatDate('2014-4-10T00:00:00.000Z');
+    let formattedDate = this.formatDate(this.history[0].date);
     let lastMOTDate = new Date(formattedDate);
-
-    console.log(formattedDate)
-    console.log(lastMOTDate)
 
     this.calculateAnnualAverageMileage();
     mileagePerDay = this.averageMileage / 365;
-    daysDifference = (today - lastMOTDate) / (1000 * 60 * 60 * 24);
+
+    daysDifference = (this.today - lastMOTDate) / (1000 * 60 * 60 * 24);
     totalMileage = this.history[0].data.mileage + (daysDifference * mileagePerDay);
     return totalMileage;
   }

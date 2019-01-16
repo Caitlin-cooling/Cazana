@@ -194,15 +194,12 @@ describe("Mileage", function() {
     let date;
 
     beforeEach(function(){
-      mileage = new Mileage(history);
       date = new Date('2019-01-15T20:28:31.000z');
+      mileage = new Mileage(history, date);
     });
 
     it("Calculates the current mileage given a history", function() {
-      spyOn(window, 'Date').and.callFake(function() {
-        return date;
-      });
-      expect(mileage.currentMileage()).toBe(69383)
+      expect(mileage.currentMileage()).toBe(74852.47681943176)
     });
   });
 
