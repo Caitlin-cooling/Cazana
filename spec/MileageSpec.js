@@ -205,4 +205,13 @@ describe("Mileage", function() {
       expect(mileage.currentMileage()).toBe(69383)
     });
   });
+
+  describe("formatDate", function() {
+    let mileage;
+
+    it("Formats a given date string in to an array on integers", function() {
+      mileage = new Mileage();
+      expect(mileage.formatDate('2014-4-10T00:00:00.000Z')).toEqual([2014, 4, 10])
+    });
+  });
 });

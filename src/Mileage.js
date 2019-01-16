@@ -24,12 +24,31 @@ class Mileage {
     let daysDifference = 0;
     let totalMileage = 0;
     let today = new Date();
-    let lastMOTDate = new Date('2018-03-10T00:00:00.000Z');
+    let formattedDate = this.formatDate('2014-4-10T00:00:00.000Z');
+    let lastMOTDate = new Date(formattedDate);
+
+    console.log(formattedDate)
+    console.log(lastMOTDate)
 
     this.calculateAnnualAverageMileage();
     mileagePerDay = this.averageMileage / 365;
     daysDifference = (today - lastMOTDate) / (1000 * 60 * 60 * 24);
     totalMileage = this.history[0].data.mileage + (daysDifference * mileagePerDay);
     return totalMileage;
+  }
+
+  formatDate(date) {
+    let newDates = [];
+    let array = [];
+    let dateArray = [];
+
+    array = date.split('T')
+    dateArray = array[0].split('-')
+
+    for(let i = 0; i < dateArray.length; i ++) {
+      newDates.push(parseInt(dateArray[i]))
+    }
+
+    return newDates;
   }
 };
